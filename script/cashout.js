@@ -19,6 +19,23 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     if (pin === '1234') {
         alert('Cashout Successful✨');
         setBalance(newBalance);
+
+        //1 history container ke dhore anbo
+        const history = document.getElementById("history-container");
+
+        //2 new div create korbo
+        const newHistory = document.createElement("div");
+
+        //3 new div a inner html add korbo
+        newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100">
+        Cashout ${cashoutAmount} Taka Success , at ${new Date()}
+    </div>
+    `;
+
+        //4 history container a new div append korbo
+        history.append(newHistory);
+
     } else {
         alert('Invalid Pin!');
         return;
