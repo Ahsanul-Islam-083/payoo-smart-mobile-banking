@@ -38,7 +38,7 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-b-2 border-gray-300">
+    <header class="border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
       <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="left flex gap-1">
           <div class="logo w-[60px]">
@@ -46,7 +46,7 @@
           </div>
           <div class="balance-info">
             <h2 class="text-2xl font-bold">
-              $ <span id="Balence">45000</span>
+              $ <span id="balance">45000</span>
             </h2>
             <p class="text-neutral/50">Available Balance</p>
           </div>
@@ -59,6 +59,7 @@
         </div>
       </section>
     </header>
+
     <section class="w-11/12 mx-auto py-10 space-y-5">
       <h2 class="text-3xl font-bold">
         Welcome to Pay<span class="text-primary">oo</span>
@@ -94,11 +95,60 @@
         </button>
       </div>
     </section>
-    <div id="cashout" class="w-11/12 mx-auto py-5">
-        <h2 class="text-xl font-bold mb-5">Cashout</h2>
-      <div
-        class="card bg-base-100 w-full rounded-2xl"
-      >
+
+    <section id="add-money" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-5">Add Money</h2>
+      <div class="card bg-base-100 w-full rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Select Bank</label>
+            <select id="add-money-bank" class="select rounded-full bg-base-200 w-full">
+              <option disabled selected>Select a Bank</option>
+              <option value="DBBL">DBBL</option>
+              <option value="IBBL">IBBL</option>
+              <option value="CITY Bank">CITY Bank</option>
+            </select>
+            <br>
+
+            <label class="label text-neutral font-bold">Bank Account Number</label>
+            <input
+              id="add-money-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input rounded-full bg-base-200 w-full p-4"
+              placeholder="Enter 11 Digit Bank Number"
+              value="01234567890"
+            />
+            <br />
+            <label class="label text-neutral font-bold">Amount to Add</label>
+            <input
+              id="add-money-amount"
+              type="number"
+              class="input rounded-full bg-base-200 w-full p-4"
+              placeholder="Enter Amount to Add"
+            />
+            <br />
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              id="add-money-pin"
+              maxlength="4"
+              type="password"
+              class="input rounded-full bg-base-200 w-full p-4"
+              placeholder="4 Digit Pin"
+            />
+            <div></div>
+            <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">
+              Add Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-xl font-bold mb-5">Cashout</h2>
+      <div class="card bg-base-100 w-full rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset">
             <label class="label text-neutral font-bold">Agent Number</label>
@@ -129,13 +179,15 @@
               placeholder="4 Digit Pin"
             />
             <div></div>
-            <button id="login-btn" class="btn btn-primary mt-4 rounded-full">
-              Cashout
+            <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">
+              Withdraw Money
             </button>
           </fieldset>
         </div>
       </div>
-    </div>
-    <script src=""></script>
+    </section>
+
+    <script src="./script/machine.js"></script>
+    <script src="./script/cashout.js"></script>
   </body>
 </html>
