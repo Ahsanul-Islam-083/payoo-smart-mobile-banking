@@ -25,7 +25,8 @@ function showOnly(id) {
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
     const sendMoney = document.getElementById("money-transfer")
-    
+    const payBill = document.getElementById("pay-bill");
+    const bonus = document.getElementById("bonus");
     // console.log(`add money - ${addMoney} , Cashout - ${cashout}`);
 
     // shobaike hide koro
@@ -33,6 +34,8 @@ function showOnly(id) {
     cashout.classList.add ("hidden");
     history.classList.add ("hidden");
     sendMoney.classList.add("hidden");
+    payBill.classList.add("hidden");
+    bonus.classList.add("hidden");
 
 
     // ID WALA ELEMENt taake tumi show koraba
