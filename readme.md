@@ -1,5 +1,4 @@
-[🚀 Payoo 🚀](https://https://payoo-msf.netlify.app/)
-
+Visite Payoo By clicking The Image Bellow
 
 [<img src="./assets/Logo-full.png" width="200"  style="background:white;padding:10px;"/>](https://payoo-msf.netlify.app/)
 # PAYOO - Smart MFS Interface 
