@@ -1,7 +1,7 @@
 [🚀 Payoo 🚀](https://https://payoo-msf.netlify.app/)
 
 
-<img src="./assets/Logo-full.png" width="200"  style="background:white;padding:10px;"/>
+[<img src="./assets/Logo-full.png" width="200"  style="background:white;padding:10px;"/>](https://https://payoo-msf.netlify.app/)
 # PAYOO - Smart MFS Interface 
 
 ## Overview
