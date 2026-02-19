@@ -77,7 +77,7 @@
           <img src="./assets/opt-2.png" alt="" />
           <p>Cashout</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button onclick="showOnly('money-transfer')" class="btn flex-col h-full py-4 btn-primary btn-soft">
           <img src="./assets/opt-3.png" alt="" />
           <p>Send Money</p>
         </button>
@@ -146,6 +146,46 @@
       </div>
     </section>
 
+    <section id="money-transfer" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
+      <div class="card bg-base-100 w-full rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">User Account Number</label>
+            <input
+              id="user-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input rounded-full bg-base-200 w-full p-4"
+              placeholder="Enter 11 Digit User Number"
+              value="01234567890"
+            />
+            <br />
+            <label class="label text-neutral font-bold">Amount</label>
+            <input
+              id="transfer-amount"
+              type="number"
+              class="input rounded-full bg-base-200 w-full p-4"
+              placeholder="Enter Amount for Transfer"
+            />
+            <br />
+            <label class="label text-neutral font-bold">Pin Number</label>
+            <input
+              id="transfer-pin"
+              maxlength="4"
+              type="password"
+              class="input rounded-full bg-base-200 w-full p-4"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <div></div>
+            <button id="transfer-btn" class="btn btn-primary mt-4 rounded-full">
+              Send Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
     <section id="cashout" class="w-11/12 mx-auto py-5">
       <h2 class="text-xl font-bold mb-5">Cashout</h2>
       <div class="card bg-base-100 w-full rounded-2xl">
@@ -197,5 +237,6 @@
     <script src="./script/machine.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/sendMoney.js"></script>
   </body>
 </html>

@@ -24,6 +24,7 @@ function showOnly(id) {
     
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
+    const sendMoney = document.getElementById("money-transfer")
     
     // console.log(`add money - ${addMoney} , Cashout - ${cashout}`);
 
@@ -31,6 +32,7 @@ function showOnly(id) {
     addMoney.classList.add ("hidden");
     cashout.classList.add ("hidden");
     history.classList.add ("hidden");
+    sendMoney.classList.add("hidden");
 
 
     // ID WALA ELEMENt taake tumi show koraba
